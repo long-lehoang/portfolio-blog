@@ -26,12 +26,12 @@
 ## Development Workflow (MUST FOLLOW)
 
 ### Vibe Coding Loop (per task/step)
-1. Write code
-2. Run all checks: `npm run lint && npm run test && npm run build && npm run test:e2e`
-3. If ANY check fails → fix and re-run from step 2 (loop until all pass)
+1. Write/vibe code (implement the feature or fix)
+2. Add unit tests (`__tests__/components/`) and E2E tests (`__tests__/e2e/`)
+3. Run all checks: `npm run lint && npm run test && npm run build && npm run test:e2e`
 4. Spawn a separate Agent for code review (quality, security, accessibility, performance)
-5. If review finds issues → fix and re-run from step 2
-6. All pass + review approved → git commit & push
+5. If ANY check fails OR review finds issues → fix and loop back to step 3
+6. All checks pass + review approved → git commit & push
 
 ### Git Push Rules
 - NEVER push until: lint passes, all unit tests pass, build succeeds, all E2E tests pass, code review approved
