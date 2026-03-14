@@ -16,9 +16,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "John Doe | Full Stack Developer",
+  title: "Long Le | Backend Engineer",
   description:
-    "Personal portfolio and blog of John Doe - Full Stack Developer specializing in React, Next.js, and Node.js.",
+    "Personal portfolio and blog of Long Le - Backend Engineer specializing in Java, microservices, and cloud-native distributed systems.",
 };
 
 export default function RootLayout({
