@@ -54,6 +54,10 @@ html {
   html {
     scroll-behavior: auto;
   }
+  .gradient-text,
+  .animated-border::before {
+    animation: none;
+  }
 }
 
 /* Scrollbar */
@@ -123,4 +127,66 @@ html {
   border-radius: 8px;
   max-width: 100%;
   margin: 1.5em 0;
+}
+
+/* Animated gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, var(--primary), #a855f7, #06b6d4, var(--primary));
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  animation: gradient-shift 6s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Animated gradient border on hover */
+.animated-border {
+  position: relative;
+}
+.animated-border::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, var(--primary), #a855f7, #06b6d4, var(--primary));
+  background-size: 300% 300%;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+  z-index: 1;
+}
+.animated-border:hover::before {
+  opacity: 1;
+  animation: gradient-shift 4s ease infinite;
+}
+
+/* Glow card effect */
+.glow-card {
+  transition: box-shadow 0.3s ease;
+}
+.glow-card:hover {
+  box-shadow:
+    0 0 20px rgba(79, 70, 229, 0.15),
+    0 0 60px rgba(79, 70, 229, 0.05);
+}
+.dark .glow-card:hover {
+  box-shadow:
+    0 0 20px rgba(129, 140, 248, 0.2),
+    0 0 60px rgba(129, 140, 248, 0.05);
+}
+
+/* Shimmer animation for project placeholders */
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
 }

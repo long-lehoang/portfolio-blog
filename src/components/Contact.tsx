@@ -14,8 +14,13 @@ const iconMap: Record<string, React.ReactNode> = {
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-20 px-4">
-      <div className="max-w-4xl mx-auto text-center">
+    <section id="contact" className="py-20 px-4 relative overflow-hidden">
+      {/* Background gradient orb */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-primary/5 blur-[120px]" />
+      </div>
+
+      <div className="max-w-4xl mx-auto text-center relative z-10">
         <ScrollReveal>
           <h2 className="text-3xl font-bold mb-4">Get In Touch</h2>
         </ScrollReveal>
@@ -31,7 +36,7 @@ export default function Contact() {
             {siteData.socialLinks.map((social, index) => (
               <motion.a
                 key={social.name}
-                whileHover={{ scale: 1.2, y: -2 }}
+                whileHover={{ scale: 1.15, y: -4 }}
                 whileTap={{ scale: 0.9 }}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -40,7 +45,7 @@ export default function Contact() {
                 href={social.url}
                 target={social.name === "email" ? undefined : "_blank"}
                 rel={social.name === "email" ? undefined : "noopener noreferrer"}
-                className="flex flex-col items-center gap-2 p-4 rounded-xl hover:bg-muted transition-colors group"
+                className="flex flex-col items-center gap-2 p-4 rounded-xl hover:bg-muted transition-all group glow-card border border-transparent hover:border-border"
                 aria-label={social.name}
               >
                 <span className="text-muted-foreground group-hover:text-primary transition-colors">
