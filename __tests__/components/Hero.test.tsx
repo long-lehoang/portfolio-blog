@@ -5,12 +5,12 @@ import Hero from "@/components/Hero";
 describe("Hero", () => {
   it("renders the name", () => {
     render(<Hero />);
-    expect(screen.getByText(/John Doe/)).toBeInTheDocument();
+    expect(screen.getByText(/Long Le/)).toBeInTheDocument();
   });
 
   it("renders the title", () => {
     render(<Hero />);
-    expect(screen.getByText("Full Stack Developer")).toBeInTheDocument();
+    expect(screen.getByText("Backend Engineer")).toBeInTheDocument();
   });
 
   it("renders Download CV button", () => {

@@ -10,16 +10,16 @@ describe("Skills", () => {
 
   it("renders skill categories", () => {
     render(<Skills />);
-    expect(screen.getByText("Frontend")).toBeInTheDocument();
-    expect(screen.getByText("Backend")).toBeInTheDocument();
-    expect(screen.getByText("DevOps & Tools")).toBeInTheDocument();
-    expect(screen.getByText("Other")).toBeInTheDocument();
+    expect(screen.getByText("Programming Languages")).toBeInTheDocument();
+    expect(screen.getByText("Backend & Cloud")).toBeInTheDocument();
+    expect(screen.getByText("Databases")).toBeInTheDocument();
+    expect(screen.getByText("System Design")).toBeInTheDocument();
   });
 
   it("renders individual skills", () => {
     render(<Skills />);
-    expect(screen.getByText("React")).toBeInTheDocument();
-    expect(screen.getByText("TypeScript")).toBeInTheDocument();
+    expect(screen.getByText("Java")).toBeInTheDocument();
+    expect(screen.getByText("Golang")).toBeInTheDocument();
     expect(screen.getByText("Docker")).toBeInTheDocument();
   });
 });

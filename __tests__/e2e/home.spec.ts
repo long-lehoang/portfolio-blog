@@ -6,9 +6,9 @@ test.describe("Home Page", () => {
   });
 
   test("should display hero section with name and title", async ({ page }) => {
-    await expect(page.getByText("John Doe", { exact: true })).toBeVisible();
+    await expect(page.getByText("Long Le", { exact: true })).toBeVisible();
     await expect(
-      page.getByRole("paragraph").filter({ hasText: /^Full Stack Developer$/ })
+      page.getByRole("paragraph").filter({ hasText: /^Backend Engineer$/ })
     ).toBeVisible();
   });
 
@@ -29,9 +29,9 @@ test.describe("Home Page", () => {
   });
 
   test("should display experience entries", async ({ page }) => {
-    await expect(page.getByText("Company ABC")).toBeVisible();
-    await expect(page.getByText("Company XYZ")).toBeVisible();
-    await expect(page.getByText("Startup Inc")).toBeVisible();
+    await expect(page.getByText("Flodesk")).toBeVisible();
+    await expect(page.getByText("FPT Software").first()).toBeVisible();
+    await expect(page.getByText("KMS Technology")).toBeVisible();
   });
 
   test("should display project cards", async ({ page }) => {
@@ -40,8 +40,8 @@ test.describe("Home Page", () => {
   });
 
   test("should display skill categories", async ({ page }) => {
-    await expect(page.getByRole("heading", { name: "Frontend" })).toBeVisible();
-    await expect(page.getByRole("heading", { name: "Backend" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Programming Languages" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Backend & Cloud" })).toBeVisible();
   });
 
   test("should display footer", async ({ page }) => {

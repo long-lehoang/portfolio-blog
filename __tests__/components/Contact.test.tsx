@@ -12,7 +12,6 @@ describe("Contact", () => {
     render(<Contact />);
     expect(screen.getByText("github")).toBeInTheDocument();
     expect(screen.getByText("linkedin")).toBeInTheDocument();
-    expect(screen.getByText("twitter")).toBeInTheDocument();
     expect(screen.getByText("email")).toBeInTheDocument();
   });
 });

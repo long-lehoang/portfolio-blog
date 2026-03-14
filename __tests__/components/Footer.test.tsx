@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 describe("Footer", () => {
   it("renders the copyright text", () => {
     render(<Footer />);
-    expect(screen.getByText(/John Doe/)).toBeInTheDocument();
+    expect(screen.getByText(/Long Le/)).toBeInTheDocument();
     expect(screen.getByText(/All rights reserved/)).toBeInTheDocument();
   });
 

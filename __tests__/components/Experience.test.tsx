@@ -10,15 +10,15 @@ describe("Experience", () => {
 
   it("renders all experience entries", () => {
     render(<Experience />);
-    expect(screen.getByText("Senior Full Stack Developer")).toBeInTheDocument();
-    expect(screen.getByText("Full Stack Developer")).toBeInTheDocument();
-    expect(screen.getByText("Junior Developer")).toBeInTheDocument();
+    expect(screen.getByText("Backend Engineer")).toBeInTheDocument();
+    expect(screen.getByText("Technical Lead")).toBeInTheDocument();
+    expect(screen.getByText("Senior Software Engineer")).toBeInTheDocument();
   });
 
   it("renders company names", () => {
     render(<Experience />);
-    expect(screen.getByText("Company ABC")).toBeInTheDocument();
-    expect(screen.getByText("Company XYZ")).toBeInTheDocument();
-    expect(screen.getByText("Startup Inc")).toBeInTheDocument();
+    expect(screen.getByText("Flodesk")).toBeInTheDocument();
+    expect(screen.getAllByText("FPT Software").length).toBeGreaterThan(0);
+    expect(screen.getByText("KMS Technology")).toBeInTheDocument();
   });
 });
