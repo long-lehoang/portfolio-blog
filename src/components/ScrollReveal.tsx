@@ -1,7 +1,11 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useSyncExternalStore } from "react";
 import { motion, useInView, useReducedMotion, type Variant } from "framer-motion";
+
+const emptySubscribe = () => () => {};
+const returnTrue = () => true;
+const returnFalse = () => false;
 
 type AnimationVariant = "fadeUp" | "fadeIn" | "slideLeft" | "slideRight" | "scaleUp";
 
@@ -46,9 +50,16 @@ export default function ScrollReveal({
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
   const prefersReducedMotion = useReducedMotion();
+  const mounted = useSyncExternalStore(emptySubscribe, returnTrue, returnFalse);
 
-  if (prefersReducedMotion) {
-    return <div className={className}>{children}</div>;
+  // Before mount, render a plain div to avoid hydration mismatch
+  // (Framer Motion adds inline styles on server that don't match client)
+  if (!mounted || prefersReducedMotion) {
+    return (
+      <div ref={ref} className={className}>
+        {children}
+      </div>
+    );
   }
 
   return (
