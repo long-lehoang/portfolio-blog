@@ -1,55 +1,78 @@
 export const siteData = {
-  name: "John Doe",
-  title: "Full Stack Developer",
-  tagline: "I build modern web applications that solve real problems and deliver great user experiences.",
+  name: "Long Le",
+  title: "Backend Engineer",
+  tagline: "I build large-scale, high-performance distributed systems. Specializing in Java/Golang, microservices, and cloud-native architecture.",
   about:
-    "I'm a passionate full stack developer with 5+ years of experience building web applications. I specialize in React, Next.js, Node.js, and cloud technologies. I love turning complex problems into simple, elegant solutions. When I'm not coding, you'll find me writing about tech, contributing to open source, or exploring new technologies.",
+    "Backend engineer with 5+ years of experience in large-scale, high-performance distributed systems using Java and Spring Boot. Specializing in microservices architecture, serverless computing, and modular system design. Proficient in AWS services, Kubernetes, Terraform, and Kafka. Strong background in database performance optimization, data migration, and high-availability system design. Passionate about system design, performance tuning, and scalability.",
   resumeUrl: "/cv.pdf",
 
   experience: [
     {
-      company: "Company ABC",
-      role: "Senior Full Stack Developer",
-      period: "2023 - Present",
+      company: "Flodesk",
+      role: "Backend Engineer",
+      period: "2025 - Present",
       description:
-        "Leading a team of 5 developers building microservices architecture. Improved API response times by 40% and implemented CI/CD pipelines that reduced deployment time from hours to minutes.",
-      tech: ["React", "Node.js", "AWS", "PostgreSQL", "Docker"],
+        "Developed and maintained stable and scalable backend services for a high-traffic email marketing platform. Implemented new features, optimized performance, and ensured security best practices.",
+      tech: ["Golang", "PostgreSQL", "Docker", "AWS", "Kubernetes", "Redis", "SQS/SNS"],
     },
     {
-      company: "Company XYZ",
-      role: "Full Stack Developer",
-      period: "2021 - 2023",
+      company: "FPT Software",
+      role: "Technical Lead",
+      period: "Jul 2023 - 2025",
       description:
-        "Developed and maintained multiple React applications serving 100K+ users. Built RESTful APIs and integrated third-party services. Mentored junior developers.",
-      tech: ["React", "TypeScript", "Python", "MongoDB", "Redis"],
+        "Developed and maintained Robotic Platform Web Store as a full-stack engineer. Handled high-throughput API requests to ensure system reliability and performance. Designed and optimized MongoDB queries, reducing response times. Collaborated with cross-functional teams for seamless integration.",
+      tech: ["Java (Spring Boot)", "ReactJS", "MongoDB", "AWS", "Kubernetes", "ArgoCD", "SonarQube"],
     },
     {
-      company: "Startup Inc",
-      role: "Junior Developer",
-      period: "2019 - 2021",
+      company: "FPT Software",
+      role: "Senior Software Engineer",
+      period: "Sep 2022 - Jun 2023",
       description:
-        "Built responsive front-end interfaces and contributed to back-end API development. Participated in agile sprints and code reviews.",
-      tech: ["JavaScript", "Vue.js", "Express", "MySQL"],
+        "Developed serverless microservices for medical record management, supporting millions of daily transactions. Automated Terraform-based infrastructure improving deployment consistency. Managed CI/CD pipelines with Jenkins and SonarQube, reducing deployment time by 50%.",
+      tech: ["Java (Quarkus)", "AWS Lambda", "MySQL", "MongoDB", "Terraform", "Cognito JWT", "Jenkins", "SonarQube"],
+    },
+    {
+      company: "KMS Technology",
+      role: "Software Engineer",
+      period: "Jul 2021 - Aug 2022",
+      description:
+        "Designed and implemented a high-speed data migration tool for a banking system with zero downtime. Developed Spring Batch-based parallel processing with Kafka, improving migration efficiency. Worked with business analysts to design scalable migration workflows.",
+      tech: ["Java (Spring Boot, Spring Batch)", "TiDB", "Kafka", "Docker"],
+    },
+    {
+      company: "Cloud Nine Solutions",
+      role: "Software Engineer",
+      period: "Aug 2020 - Jun 2021",
+      description:
+        "Gained hands-on experience in backend development by contributing to multiple projects. Developed RESTful APIs and optimized database queries using PHP Laravel, MySQL, and JavaScript.",
+      tech: ["PHP (Laravel)", "MySQL", "JavaScript"],
     },
   ],
 
   skills: [
     {
-      category: "Frontend",
-      items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+      category: "Programming Languages",
+      items: ["Java", "Golang", "PHP", "JavaScript"],
     },
     {
-      category: "Backend",
-      items: ["Node.js", "Python", "Express", "PostgreSQL", "MongoDB"],
+      category: "Backend & Cloud",
+      items: ["Spring Boot", "Quarkus", "AWS Lambda", "Kafka", "Kubernetes", "Docker", "Terraform"],
     },
     {
-      category: "DevOps & Tools",
-      items: ["Docker", "AWS", "GitHub Actions", "Vercel", "Git"],
+      category: "Databases",
+      items: ["MySQL", "TiDB", "MongoDB", "PostgreSQL"],
     },
     {
-      category: "Other",
-      items: ["REST APIs", "GraphQL", "Testing", "Agile", "CI/CD"],
+      category: "System Design",
+      items: ["Microservices", "Serverless", "Distributed Systems", "CI/CD"],
     },
+  ],
+
+  certifications: [
+    "AWS Certified Solutions Architect - Associate",
+    "HashiCorp Certified: Terraform Associate",
+    "Udacity Nanodegree: Java Web Developer",
+    "Udacity Nanodegree: AWS Cloud Architect",
   ],
 
   projects: [
@@ -93,8 +116,7 @@ export const siteData = {
 
   socialLinks: [
     { name: "github", url: "https://github.com" },
-    { name: "linkedin", url: "https://linkedin.com" },
-    { name: "twitter", url: "https://twitter.com" },
-    { name: "email", url: "mailto:hello@example.com" },
+    { name: "linkedin", url: "https://www.linkedin.com/in/long-lehoang/" },
+    { name: "email", url: "mailto:long.bk.khmt@gmail.com" },
   ],
 };
