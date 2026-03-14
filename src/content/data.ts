@@ -81,8 +81,8 @@ export const siteData = {
       description:
         "A full-featured e-commerce platform with real-time inventory management, payment processing, and admin dashboard.",
       tech: ["Next.js", "Stripe", "PostgreSQL", "Tailwind CSS"],
-      github: "https://github.com",
-      demo: "https://demo.com",
+      github: "https://github.com/your-username/ecommerce-platform",
+      demo: "https://your-ecommerce-demo.vercel.app",
       image: "/images/project-1.png",
     },
     {
@@ -90,8 +90,8 @@ export const siteData = {
       description:
         "A collaborative task management tool with real-time updates, drag-and-drop, and team workspaces.",
       tech: ["React", "Node.js", "Socket.io", "MongoDB"],
-      github: "https://github.com",
-      demo: "https://demo.com",
+      github: "https://github.com/your-username/task-management-app",
+      demo: "https://your-task-app-demo.vercel.app",
       image: "/images/project-2.png",
     },
     {
@@ -99,8 +99,8 @@ export const siteData = {
       description:
         "An AI-powered content generation tool that helps writers create blog posts, social media content, and marketing copy.",
       tech: ["Next.js", "OpenAI", "TypeScript", "Tailwind CSS"],
-      github: "https://github.com",
-      demo: "https://demo.com",
+      github: "https://github.com/your-username/ai-content-generator",
+      demo: "https://your-ai-generator-demo.vercel.app",
       image: "/images/project-3.png",
     },
     {
@@ -108,8 +108,8 @@ export const siteData = {
       description:
         "A real-time messaging application with file sharing, group chats, and end-to-end encryption.",
       tech: ["React", "WebSocket", "Redis", "Docker"],
-      github: "https://github.com",
-      demo: "https://demo.com",
+      github: "https://github.com/your-username/realtime-chat-app",
+      demo: "https://your-chat-app-demo.vercel.app",
       image: "/images/project-4.png",
     },
   ],
