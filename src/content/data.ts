@@ -10,7 +10,7 @@ export const siteData = {
     {
       company: "Flodesk",
       role: "Backend Engineer",
-      period: "2025 - Present",
+      period: "May 2025 - Present",
       description:
         "Developed and maintained stable and scalable backend services for a high-traffic email marketing platform. Implemented new features, optimized performance, and ensured security best practices.",
       tech: ["Golang", "PostgreSQL", "Docker", "AWS", "Kubernetes", "Redis", "SQS/SNS"],
@@ -18,7 +18,7 @@ export const siteData = {
     {
       company: "FPT Software",
       role: "Technical Lead",
-      period: "Jul 2023 - 2025",
+      period: "Jan 2025 - May 2025",
       description:
         "Developed and maintained Robotic Platform Web Store as a full-stack engineer. Handled high-throughput API requests to ensure system reliability and performance. Designed and optimized MongoDB queries, reducing response times. Collaborated with cross-functional teams for seamless integration.",
       tech: ["Java (Spring Boot)", "ReactJS", "MongoDB", "AWS", "Kubernetes", "ArgoCD", "SonarQube"],
@@ -26,7 +26,7 @@ export const siteData = {
     {
       company: "FPT Software",
       role: "Senior Software Engineer",
-      period: "Sep 2022 - Jun 2023",
+      period: "Sep 2022 - Dec 2024",
       description:
         "Developed serverless microservices for medical record management, supporting millions of daily transactions. Automated Terraform-based infrastructure improving deployment consistency. Managed CI/CD pipelines with Jenkins and SonarQube, reducing deployment time by 50%.",
       tech: ["Java (Quarkus)", "AWS Lambda", "MySQL", "MongoDB", "Terraform", "Cognito JWT", "Jenkins", "SonarQube"],
@@ -115,7 +115,7 @@ export const siteData = {
   ],
 
   socialLinks: [
-    { name: "github", url: "https://github.com" },
+    { name: "github", url: "https://github.com/long-lehoang" },
     { name: "linkedin", url: "https://www.linkedin.com/in/long-lehoang/" },
     { name: "email", url: "mailto:long.bk.khmt@gmail.com" },
   ],
