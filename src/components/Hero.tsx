@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useSyncExternalStore } from "react";
 import {
   motion,
   useScroll,
@@ -43,6 +43,10 @@ const orbs = [
   { size: 300, x: "-5%", y: "50%", color: "#ec4899", duration: 18 },
 ];
 
+const emptySubscribe = () => () => {};
+const returnTrue = () => true;
+const returnFalse = () => false;
+
 const socialIcons: Record<string, React.ReactNode> = {
   github: <Github size={20} />,
   linkedin: <Linkedin size={20} />,
@@ -52,6 +56,7 @@ const socialIcons: Record<string, React.ReactNode> = {
 export default function Hero() {
   const ref = useRef(null);
   const prefersReducedMotion = useReducedMotion();
+  const mounted = useSyncExternalStore(emptySubscribe, returnTrue, returnFalse);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"],
@@ -108,7 +113,7 @@ export default function Hero() {
 
       {/* Floating Geometric Shapes */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
-        {!prefersReducedMotion &&
+        {mounted && !prefersReducedMotion &&
           floatingShapes.map((shape, i) => (
             <motion.div
               key={`shape-${i}`}
@@ -187,7 +192,7 @@ export default function Hero() {
               style={{ perspective: 600, transformStyle: "preserve-3d" }}
             >
               {/* Orbiting ring */}
-              {!prefersReducedMotion && (
+              {mounted && !prefersReducedMotion && (
                 <motion.div
                   className="absolute inset-[-12px] rounded-full border-2 border-primary/30 border-dashed"
                   animate={{ rotate: 360 }}
@@ -285,7 +290,7 @@ export default function Hero() {
       </motion.div>
 
       {/* Scroll indicator */}
-      {!prefersReducedMotion && (
+      {mounted && !prefersReducedMotion && (
         <motion.div
           className="absolute bottom-8 left-1/2 -translate-x-1/2"
           aria-hidden="true"

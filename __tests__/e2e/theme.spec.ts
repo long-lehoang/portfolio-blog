@@ -3,7 +3,10 @@ import { test, expect } from "@playwright/test";
 // Theme toggle uses desktop nav — only test on desktop Chromium
 test.describe("Theme Toggle", () => {
   test.beforeEach(async ({ page }, testInfo) => {
-    test.skip(testInfo.project.name === "Mobile Chrome", "Skip on mobile");
+    test.skip(
+      testInfo.project.name === "Mobile Chrome" || testInfo.project.name === "Mobile Safari",
+      "Skip on mobile — theme toggle test requires stable desktop navbar",
+    );
     await page.goto("/");
   });
 
