@@ -77,12 +77,12 @@ export const siteData = {
 
   projects: [
     {
-      title: "E-Commerce Platform",
+      title: "Event Processing Fairness System",
       description:
-        "A full-featured e-commerce platform with real-time inventory management, payment processing, and admin dashboard.",
-      tech: ["Next.js", "Stripe", "PostgreSQL", "Tailwind CSS"],
-      github: "https://github.com/your-username/ecommerce-platform",
-      demo: "https://your-ecommerce-demo.vercel.app",
+        "A distributed system that processes webhook events fairly across multi-tenant accounts. Uses Kafka for event streaming, Redis for rate limiting and deduplication, and circuit breakers for fault tolerance. Includes a dead-letter queue service for retry handling and full observability via Prometheus/Grafana. Deployed on Kubernetes with auto-scaling.",
+      tech: ["Spring Boot", "Apache Kafka", "Redis", "PostgreSQL", "Go", "Docker", "Kubernetes", "Helm", "Prometheus", "Grafana"],
+      github: "https://github.com/long-lehoang/event-processing-fairness",
+      demo: "",
       image: "/images/project-1.png",
     },
     {
