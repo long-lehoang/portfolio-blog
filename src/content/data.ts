@@ -1,78 +1,117 @@
 export const siteData = {
   name: "Long Le",
   title: "Backend Engineer",
-  tagline: "I build large-scale, high-performance distributed systems. Specializing in Java/Golang, microservices, and cloud-native architecture.",
+  tagline:
+    "Backend Engineer specializing in Distributed & Event-Driven Systems (Java, Go, Node.js, PHP). Building high-throughput distributed systems, event-driven integrations, and production MCP servers.",
   about:
-    "Backend engineer with 5+ years of experience in large-scale, high-performance distributed systems using Java and Spring Boot. Specializing in microservices architecture, serverless computing, and modular system design. Proficient in AWS services, Kubernetes, Terraform, and Kafka. Strong background in database performance optimization, data migration, and high-availability system design. Passionate about system design, performance tuning, and scalability.",
+    "Backend engineer with 6 years building large-scale, high-throughput distributed systems, with deep ownership of event-driven integrations and data sync for e-commerce and marketing platforms. At Flodesk, owns two-way sync of subscribers and order/commerce events across Shopify, Squarespace, Wix, ThriveCart, and Zapier — webhook ingestion, OAuth token lifecycles, consent compliance, and high-throughput import pipelines — and also designed and shipped the company’s production remote Model Context Protocol (MCP) server (mcp.flodesk.com), exposing Flodesk analytics to LLM clients with OAuth 2.1 and full observability. Earlier, nearly four years of Java / Spring Boot microservices and serverless on AWS, including high-throughput banking data migration. AWS Solutions Architect and Terraform certified.",
   resumeUrl: "/cv.pdf",
 
   experience: [
     {
       company: "Flodesk",
       role: "Backend Engineer",
-      period: "May 2025 - Present",
+      period: "May 2025 - Jul 2026",
       description:
-        "Developed and maintained stable and scalable backend services for a high-traffic email marketing platform. Implemented new features, optimized performance, and ensured security best practices.",
-      tech: ["Golang", "PostgreSQL", "Docker", "AWS", "Kubernetes", "Redis", "SQS/SNS"],
+        "Owned Flodesk’s third-party integration platform across six commerce/content integrations (Shopify, Squarespace, Wix, ThriveCart, Canva, Instagram) plus Zapier — OAuth (including an Ory Hydra authorization-server upgrade), webhook ingestion, token refresh, and consent-compliant sync. Eliminated ~200k redundant events/day with checkpointing and dedup, cut subscriber-import memory ~50%, and built the Dunning 2.0 event-driven payment-recovery flow. Designed and shipped Flodesk’s remote Model Context Protocol (MCP) server (TypeScript) to production with OAuth 2.1, Streamable HTTP transport, and Prometheus metrics.",
+      tech: [
+        "Go",
+        "TypeScript",
+        "Node.js",
+        "Webhooks",
+        "OAuth2 (Ory Hydra)",
+        "PostgreSQL",
+        "MongoDB",
+        "Redis",
+        "Recurly",
+        "AWS",
+        "Kubernetes",
+        "Prometheus",
+        "OpenTelemetry",
+      ],
     },
     {
       company: "FPT Software",
       role: "Technical Lead",
       period: "Jan 2025 - May 2025",
       description:
-        "Developed and maintained Robotic Platform Web Store as a full-stack engineer. Handled high-throughput API requests to ensure system reliability and performance. Designed and optimized MongoDB queries, reducing response times. Collaborated with cross-functional teams for seamless integration.",
-      tech: ["Java (Spring Boot)", "ReactJS", "MongoDB", "AWS", "Kubernetes", "ArgoCD", "SonarQube"],
+        "Robotic Platform – Web Store (robotic module store for the DART platform). Built and maintained the DART robotic-module store, scaling its high-throughput Spring Boot APIs; optimized MongoDB queries and indexes to reduce response time and keep latency stable under load. Delivered end-to-end store features across Java 17/Spring Boot APIs and ReactJS UI, from API design through frontend integration and production deployment.",
+      tech: ["Java 17 (Spring Boot)", "ReactJS", "MongoDB", "AWS", "Kubernetes", "ArgoCD", "SonarQube"],
     },
     {
       company: "FPT Software",
       role: "Senior Software Engineer",
       period: "Sep 2022 - Dec 2024",
       description:
-        "Developed serverless microservices for medical record management, supporting millions of daily transactions. Automated Terraform-based infrastructure improving deployment consistency. Managed CI/CD pipelines with Jenkins and SonarQube, reducing deployment time by 50%.",
-      tech: ["Java (Quarkus)", "AWS Lambda", "MySQL", "MongoDB", "Terraform", "Cognito JWT", "Jenkins", "SonarQube"],
+        "Healthcare System – serverless for medical records. Built durable batch-processing workflows for medical-record management, running entirely on AWS Lambda and completing each batch within 10 minutes. Automated Terraform infrastructure and Jenkins/SonarQube CI/CD, cutting deployment time 50%; supported secure authentication with Cognito JWT and mentored junior engineers on backend practices.",
+      tech: ["Java 11 (Quarkus)", "AWS Lambda", "MySQL", "MongoDB", "Terraform", "Cognito JWT", "Jenkins"],
     },
     {
       company: "KMS Technology",
       role: "Software Engineer",
       period: "Jul 2021 - Aug 2022",
       description:
-        "Designed and implemented a high-speed data migration tool for a banking system with zero downtime. Developed Spring Batch-based parallel processing with Kafka, improving migration efficiency. Worked with business analysts to design scalable migration workflows.",
-      tech: ["Java (Spring Boot, Spring Batch)", "TiDB", "Kafka", "Docker"],
+        "Banking System – high-speed data migration. Designed and implemented high-speed migration tool with Spring Batch parallel processing and Kafka for tables with millions of records and 30+ columns. Optimized batch jobs reducing migration run from >10 hours to ~1 hour, and diagnosed and resolved data-write race conditions to ensure data correctness while improving throughput.",
+      tech: ["Java 11 (Spring Boot, Spring Batch, Spring Data)", "TiDB", "Kafka", "Docker"],
     },
     {
       company: "Cloud Nine Solutions",
       role: "Software Engineer",
       period: "Aug 2020 - Jun 2021",
       description:
-        "Gained hands-on experience in backend development by contributing to multiple projects. Developed RESTful APIs and optimized database queries using PHP Laravel, MySQL, and JavaScript.",
-      tech: ["PHP (Laravel)", "MySQL", "JavaScript"],
+        "Built RESTful APIs and optimized database queries on a Laravel / MySQL stack; foundational backend and system-design experience working alongside senior engineers.",
+      tech: ["PHP (Laravel)", "MySQL", "Docker"],
     },
   ],
 
   skills: [
     {
       category: "Programming Languages",
-      items: ["Java", "Golang", "PHP", "JavaScript"],
+      items: ["Java", "Golang", "TypeScript", "Node.js", "PHP", "ReactJS", "JavaScript"],
     },
     {
       category: "Backend & Cloud",
-      items: ["Spring Boot", "Quarkus", "AWS Lambda", "Kafka", "Kubernetes", "Docker", "Terraform"],
+      items: ["AWS", "Kubernetes", "Docker", "Terraform", "AWS Lambda", "Prometheus", "OpenTelemetry"],
     },
     {
       category: "Databases",
-      items: ["MySQL", "TiDB", "MongoDB", "PostgreSQL"],
+      items: ["PostgreSQL", "MongoDB", "Redis", "MySQL", "TiDB"],
     },
     {
       category: "System Design",
-      items: ["Microservices", "Serverless", "Distributed Systems", "CI/CD"],
+      items: [
+        "Distributed Systems",
+        "Event-Driven Architecture",
+        "Microservices",
+        "Message Queues (SQS, Kafka)",
+        "Webhooks & Idempotency",
+        "High-Availability & Throughput",
+        "Performance Optimization",
+      ],
+    },
+    {
+      category: "MCP & Agent Tooling",
+      items: [
+        "MCP Server Design",
+        "OAuth 2.1 & Dynamic Client Registration",
+        "MCP Tool & Schema Design",
+        "Agentic Workflows (Claude Code)",
+      ],
     },
   ],
 
   certifications: [
     "AWS Certified Solutions Architect - Associate",
     "HashiCorp Certified: Terraform Associate",
-    "Udacity Nanodegree: Java Web Developer",
-    "Udacity Nanodegree: AWS Cloud Architect",
+  ],
+
+  education: [
+    {
+      institution: "Ho Chi Minh University of Technology (Bach Khoa HCM)",
+      degree: "B.Eng. in Computer Science",
+      period: "08/2017 – 04/2022",
+      gpa: "7.59",
+    },
   ],
 
   projects: [
@@ -86,37 +125,37 @@ export const siteData = {
       image: "/images/project-1.png",
     },
     {
-      title: "Task Management App",
+      title: "Flodesk Remote MCP Server",
       description:
-        "A collaborative task management tool with real-time updates, drag-and-drop, and team workspaces.",
-      tech: ["React", "Node.js", "Socket.io", "MongoDB"],
-      github: "https://github.com/your-username/task-management-app",
-      demo: "https://your-task-app-demo.vercel.app",
+        "Production remote Model Context Protocol server exposing analytics tools to LLM clients. Architected with OAuth 2.1, Dynamic Client Registration, Streamable HTTP transport, per-session isolation, Redis rate limiting, and Prometheus metrics.",
+      tech: ["TypeScript", "Node.js", "MCP SDK", "OAuth 2.1", "Redis", "Docker", "Prometheus"],
+      github: "https://github.com/long-lehoang",
+      demo: "https://mcp.flodesk.com",
       image: "/images/project-2.png",
     },
     {
-      title: "AI Content Generator",
+      title: "High-Speed Banking Data Migration Tool",
       description:
-        "An AI-powered content generation tool that helps writers create blog posts, social media content, and marketing copy.",
-      tech: ["Next.js", "OpenAI", "TypeScript", "Tailwind CSS"],
-      github: "https://github.com/your-username/ai-content-generator",
-      demo: "https://your-ai-generator-demo.vercel.app",
+        "High-speed data migration tool for banking system tables with millions of records. Designed with Spring Batch parallel processing and Kafka streaming, cutting migration duration from >10 hours to ~1 hour with zero downtime.",
+      tech: ["Java", "Spring Boot", "Spring Batch", "TiDB", "Kafka", "Docker"],
+      github: "https://github.com/long-lehoang",
+      demo: "",
       image: "/images/project-3.png",
     },
     {
-      title: "Real-time Chat App",
+      title: "Healthcare Serverless Microservices",
       description:
-        "A real-time messaging application with file sharing, group chats, and end-to-end encryption.",
-      tech: ["React", "WebSocket", "Redis", "Docker"],
-      github: "https://github.com/your-username/realtime-chat-app",
-      demo: "https://your-chat-app-demo.vercel.app",
+        "Serverless microservices managing medical records and handling millions of daily transactions. Built on Quarkus and AWS Lambda with sub-10-minute batch workflows, Terraform IaC, and Cognito JWT security.",
+      tech: ["Java", "Quarkus", "AWS Lambda", "Terraform", "MySQL", "MongoDB", "Cognito JWT"],
+      github: "https://github.com/long-lehoang",
+      demo: "",
       image: "/images/project-4.png",
     },
   ],
 
   socialLinks: [
     { name: "github", url: "https://github.com/long-lehoang" },
-    { name: "linkedin", url: "https://www.linkedin.com/in/long-lehoang/" },
+    { name: "linkedin", url: "https://www.linkedin.com/in/long-lehoang" },
     { name: "email", url: "mailto:long.bk.khmt@gmail.com" },
   ],
 };

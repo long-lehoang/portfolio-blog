@@ -33,8 +33,8 @@ test.describe("Safari Mobile", () => {
     const experienceSection = page.locator("#experience");
     await experienceSection.scrollIntoViewIfNeeded();
     await expect(page.getByRole("heading", { name: "Experience", exact: true })).toBeVisible();
-    await expect(page.getByText("Flodesk")).toBeVisible();
-    await expect(page.getByText("FPT Software").first()).toBeVisible();
+    await expect(experienceSection.getByText("Flodesk", { exact: true })).toBeVisible();
+    await expect(experienceSection.getByText("FPT Software").first()).toBeVisible();
 
     const skillsSection = page.locator("#skills");
     await skillsSection.scrollIntoViewIfNeeded();
@@ -53,10 +53,10 @@ test.describe("Safari Mobile", () => {
 
   test("all experience entries are rendered and visible", async ({ page }) => {
     await page.locator("#experience").scrollIntoViewIfNeeded();
-    await expect(page.getByText("Flodesk")).toBeVisible();
-    await expect(page.getByText("FPT Software").first()).toBeVisible();
-    await expect(page.getByText("KMS Technology")).toBeVisible();
-    await expect(page.getByText("Cloud Nine Solutions")).toBeVisible();
+    await expect(page.locator("#experience").getByText("Flodesk", { exact: true })).toBeVisible();
+    await expect(page.locator("#experience").getByText("FPT Software").first()).toBeVisible();
+    await expect(page.locator("#experience").getByText("KMS Technology")).toBeVisible();
+    await expect(page.locator("#experience").getByText("Cloud Nine Solutions")).toBeVisible();
   });
 
   test("skill items are rendered and visible", async ({ page }) => {
@@ -70,8 +70,8 @@ test.describe("Safari Mobile", () => {
 
   test("project cards are rendered and visible", async ({ page }) => {
     await page.locator("#projects").scrollIntoViewIfNeeded();
-    await expect(page.getByRole("heading", { name: "E-Commerce Platform" })).toBeVisible();
-    await expect(page.getByRole("heading", { name: "Task Management App" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Event Processing Fairness System" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Flodesk Remote MCP Server" })).toBeVisible();
   });
 
   test("navbar is visible and sticky", async ({ page }) => {

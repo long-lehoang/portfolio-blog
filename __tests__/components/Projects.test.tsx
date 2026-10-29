@@ -10,10 +10,10 @@ describe("Projects", () => {
 
   it("renders all project titles", () => {
     render(<Projects />);
-    expect(screen.getByText("E-Commerce Platform")).toBeInTheDocument();
-    expect(screen.getByText("Task Management App")).toBeInTheDocument();
-    expect(screen.getByText("AI Content Generator")).toBeInTheDocument();
-    expect(screen.getByText("Real-time Chat App")).toBeInTheDocument();
+    expect(screen.getByText("Event Processing Fairness System")).toBeInTheDocument();
+    expect(screen.getByText("Flodesk Remote MCP Server")).toBeInTheDocument();
+    expect(screen.getByText("High-Speed Banking Data Migration Tool")).toBeInTheDocument();
+    expect(screen.getByText("Healthcare Serverless Microservices")).toBeInTheDocument();
   });
 
   it("renders Code and Live Demo links", () => {

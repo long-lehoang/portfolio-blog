@@ -10,6 +10,6 @@ describe("About", () => {
 
   it("renders the bio text", () => {
     render(<About />);
-    expect(screen.getByText(/Passionate about system design/)).toBeInTheDocument();
+    expect(screen.getByText(/event-driven integrations and data sync/i)).toBeInTheDocument();
   });
 });

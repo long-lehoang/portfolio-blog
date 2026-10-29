@@ -29,14 +29,14 @@ test.describe("Home Page", () => {
   });
 
   test("should display experience entries", async ({ page }) => {
-    await expect(page.getByText("Flodesk")).toBeVisible();
-    await expect(page.getByText("FPT Software").first()).toBeVisible();
-    await expect(page.getByText("KMS Technology")).toBeVisible();
+    await expect(page.locator("#experience").getByText("Flodesk", { exact: true })).toBeVisible();
+    await expect(page.locator("#experience").getByText("FPT Software").first()).toBeVisible();
+    await expect(page.locator("#experience").getByText("KMS Technology")).toBeVisible();
   });
 
   test("should display project cards", async ({ page }) => {
-    await expect(page.getByRole("heading", { name: "E-Commerce Platform" })).toBeVisible();
-    await expect(page.getByRole("heading", { name: "Task Management App" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Event Processing Fairness System" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Flodesk Remote MCP Server" })).toBeVisible();
   });
 
   test("should display skill categories", async ({ page }) => {
